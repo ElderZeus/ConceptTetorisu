@@ -1,4 +1,26 @@
-# TetrisProcessingPOO
-First project.
-
-Triyng to find a way to merge both archives in a single one.
+# Primer Proyecto POO
+En este repositorio va a poder observar los avances y primeros elementos correspondientes al repaso sobre programacion estructurada, como componente de plan de estudio de la materia Programacion Orientada a Objetos - UNAL.
+## Objetivo
+Repasar los conceptos básicos de la [programación estructurada](https://github.com/objetos/structured_programming) al implementar el juego del tetris, según lo indicado acá.
+## Desarrollo
+### Conceptual
+El abordaje inicial del proyecto se centro en la recopilacion de informacion sobre el desarrollo de la programacion estructurada, con el fin de refrescar los conocimientos ya vistos en materias anteriores. Luego buscar informacion sobre JAVA, ya que, para este momento es una primera aproximacion a su sintaxis y, en general, a su uso. Como ultimo pasa de la etapa conceptual, buscar ideas y referencias con respecto al como se le da desarrollo del juego de [Tetris](https://en.wikipedia.org/wiki/Tetris#Gameplay) por parte de la comunidad en internet.
+Despues de dar el repaso, se procede a investigar sobre el Tetris; en primera instancia se investiga su historia, como apartado de curiosidad; luego, su [estructura basica](https://www.interaction-design.org/literature/article/a-game-explained-an-example-of-a-single-game-and-how-it-meets-the-rules-of-fun), con el fin de entender las piezas, [Tetrominos](https://tetris.fandom.com/es/wiki/Tetromino), su composicion, movimientos, rotaciones y condiciones de desarrollo del juego, para posteriormente, descomponer todos estos requerimientos para hacer posible su implementacion en el proyecto propio.
+Por ultimo, se procede a la descomposicion de los requerimientos en pasos sencillos, funciones, las cuales se intenta abordar a lo largo del desarrollo.
+### Practico
+Desde el primer momento, se plantea el problema como uno de dificil afrontamiento, ya que es una tarea nunca planteada y que no se podia dilucidar, en primera instancia, como una secuencia logica y basica de procesos. Las primeras semanas del curso se puso cuidado a cualquier ayuda impartida en la catedra, y se procede a ir dando desarrollo a lo que se planteaba en el mismo; eventos que se pueden obeservar como procesos de bosquejo de lo que en ultima instancia seria la entrega final. 
+Los archivos [tetromino.pde](https://github.com/ElderZeus/TetrisProcessingPOO/blob/master/tetromino.pde) y [grid_w_blocks.pde](https://github.com/ElderZeus/TetrisProcessingPOO/blob/master/grid_w_blocks.pde) son los primeros proyectos en los cuales, intento, como programador, dar una solucion final al problema.
+En el primero [tetromino.pde](https://github.com/ElderZeus/TetrisProcessingPOO/blob/master/tetromino.pde) se hace uso de los recuersos impartidos en clase, y permite entender el funcionamiento de las operaciones [Bitwise](https://en.wikipedia.org/wiki/Bitwise_operation), concepto nuevo para este momento; a demas, permite el entendimiento de las rotaciones y composicion en bloques de los tetrominos.
+En el segundo [grid_w_blocks.pde](https://github.com/ElderZeus/TetrisProcessingPOO/blob/master/grid_w_blocks.pde) se ve la primera parte del desarrollo, guiado casi en su totalidad por los tutoriales online, vease referencias, con el fin de estructurar la malla de valores, desplazamientos en la misma, colisiones, tiempo de movimientos de las piezas. Este fue el punto donde mas se consumio tiempo, ya que eran conceptos e implementaciones avanzadas, lo cual consumio casi la totalidad del plazo.
+Por ultimo, el archivo [tetris_help.pde](https://github.com/ElderZeus/TetrisProcessingPOO/blob/master/tetris_help.pde) sumariza todo lo visto con anterioridad, definase como proyecto a entregar. Se aclara que muchas del codigo se basaron en soluciones practicas encontradas en las referencias, y que en ultima instancia, mi ingerencia como programador se redujo a entender estas soluciones e implementarlas segun mi necesidad. Lamentablemente muchas de estas soluciones abarcan temas avanzados para el curso, y se prevee que no sean la solucion literal del objetivo planteado en un principio.
+## Conclusion
+Despues de haber dado un desarrollo tan teorico al problema, y abarcar tal cantidad de codigos pre-existentes, se concluye que: si bien no se cumple con el objetivo planteado en primera instancia, usar este proyecto como repaso de conceptos anteriores, se ve una ganacia por parte de conocimiento practico para el desarrollo futuro de la catedra, a lo cual, se vislumbra la importancia y los beneficios de la programacion orientada a objetos, ya que se acerca mas al desarrollo de los problemas en la "vida real", y facilita, ordena, el proceso de escritura de codigo. Aunque no fue el tema central, se dio un repaso, considerable, al paradigma de programacion estructurada. Por consiguiente, se espera que en proyectos venideros, dar una solucion acorde a los solicitado, e implementar lo aprendido en este primer proyecto.
+## Referencias
+Todo el material expuesto se puede encontrar en los siguientes enlaces:
+[Code Tetris: JavaScript Tutorial for Beginners](https://bit.ly/3jvTDlv),
+[Processing Forum: Grid Structure](https://bit.ly/3cVGobu),
+[Processing Forum: Keyboard use](https://bit.ly/34jVP9u),
+[Processing Sketch: Help Structure](https://bit.ly/3ngTaWB),
+[Tetris - Java: Basic JAVA implementation](https://bit.ly/3le2HMt),
+[Tetrominos: Bitwyse](https://bit.ly/3ldJivc).
+Todo el agradecimiento y credito a los autores.
