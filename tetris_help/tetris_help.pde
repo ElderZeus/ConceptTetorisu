@@ -304,18 +304,18 @@ class Piece {
     r = 0;//empieza con la posicion de rotacion 0, default
     pos = pieces.pos[type];
   }
-  //posicion actual de la pieza
+  //dibujo por cuadros tetromino
   void display(boolean still) {
     stroke(250);
     fill(c);
     pushMatrix();
     if (!still) {
-      translate(160, 40);
-      translate(x*q, y*q);
+      translate(160, 40);//pos inicial pieza, mismo que grid
+      translate(x*q, y*q);//desplazamiento de la pieza segun q, tamaño bloques
     }
-    int rot = still ? 0 : r;//rotacion actual de la pieza
+    int rot = still ? 0 : r;//quien es mayor 0 o r
     for (int i = 0; i < 4; i++) {
-      rect(pos[rot][i][0] * q, pos[rot][i][1] * q, 20, 20);
+      rect(pos[rot][i][0] * q, pos[rot][i][1] * q, q, q);//cubos del tetromino
     }
     popMatrix();
   }
