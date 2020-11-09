@@ -54,6 +54,10 @@ void draw()
   background(img);
   if (grid != null) {//mientras que grid no sea nulo
     grid.drawGrid();
+    if (score.points > 10) {
+      grid.Obstacle();
+    }
+
     int now = millis();
     //si gameOn pasa a ser true, establece el tiempo de ejecucion a n, empezar de nuevo
     if (gameOn) {

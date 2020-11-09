@@ -1,9 +1,18 @@
 class Grid {
   int [][] cells = new int[w][h];
   //llena el arreglo de 0 (vacio)
+  void Obstacle() {
+    for (int i = 0; i < w; i++) {
+      if (i<2 || i>7) {
+        for (int j = 0; j < h; j=j+3) {
+          cells[i][j] = 2;
+        }
+      }
+    }
+  }
   Grid() {
-    for (int i = 0; i < w; i ++){
-      for(int j = 0; j < h; j ++) {
+    for (int i = 0; i < w; i ++) {
+      for (int j = 0; j < h; j ++) {
         cells[i][j] = 0; //recorre y llena el arreglo de las celdas con 0
       }
     }
