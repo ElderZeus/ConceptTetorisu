@@ -1,17 +1,17 @@
 //valores default del juego
+PImage img;
 int w = 10; //celdas de ancho
 int h = 20; // celdas de alto
-int q = 20; //tamaño de bloque alto*ancho
+int q = 25; //tamaño de bloque alto*ancho
 int delayTime;//tiempo retraso entre movimientos
 int currentTime; //tiempo actual
 int r = 0;//rotacion de la pieza
 int level = 1;//nivel del juego
 int clearLines = 0;//puntaje
-int ancho = 550;
-int alto = 450;
+
 //propiedades del texto a mostrar para usuario
-int txtSize = 20;
-int textColor = color(250, 255, 3);
+int txtSize = 25;
+int textColor = color(211, 77, 135);
 //estado del juego, game over o gome on
 boolean gameOver = false;
 boolean gameOn = false;
@@ -24,8 +24,8 @@ Score score;
 
 void setup()
 {
-  size(550, 450);
-  textSize(28);
+  size(550, 600);
+  textSize(30);
 }
 
 void initialize() {
@@ -42,7 +42,8 @@ void initialize() {
 
 void draw()
 {
-  background(0);
+  img = loadImage("img01.jpg");
+  background(img);
   if (grid != null) {//mientras que grid no sea nulo
     grid.drawGrid();
     int now = millis();
@@ -58,11 +59,15 @@ void draw()
   }
   //dibuja el cuadro de dialogo cuando pierde
   if (gameOver) {
-    text("Game Over!", 120, 220);
+    String s = "Fin del Juego";
+    textAlign(CENTER);
+    text(s, 120, 220, 300, 100 );
   }
   //cuadro de dialogo para empezar el juego
   if (!gameOn) {
-    text("Press Any Key to Start", 120, 280);
+    String s = "Presione una tecla para empezar";
+    textAlign(CENTER);
+    text(s, 120, 220, 300, 100 );
   }
 }
 //se encarga de mostrar la siguiente pieza en UI
@@ -95,5 +100,5 @@ void keyPressed() {
       gameOver = false;
       gameOn = true;
     }
-  } 
+  }
 }

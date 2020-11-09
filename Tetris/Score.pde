@@ -19,20 +19,23 @@ class Score {
   }
   void display() {
     pushMatrix();
-    translate(40, 60);
+    translate(390, 90);
 
     //imprimir Puntaje
     fill(textColor);
-    text("Score: ", 0, 0);
+    text("Puntaje: ", 0, 0);
     fill(#FFFCFC);
-    text(points, 0, txtSize*1.5);
+    text(points, 0, txtSize);
 
-    translate(400, 0);
+    translate(15, 100);
     // imprimir siguiente pieza
     fill(textColor);
-    text("Next: ", 0, 0);
+    text("Siguiente: ", 0, 0);
     //ubicacion del cuadro en ventana
-    translate(1.2*q, 1.5*q);
+    translate(-60, 10);
+    fill(0);
+    rect(0, 0, 5*q, 5*q);
+    translate(50, 40);
     nextPiece.display(true);
     popMatrix();
   }

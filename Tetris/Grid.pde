@@ -102,7 +102,7 @@ class Grid {
   void drawGrid() {
     stroke(140);
     pushMatrix();
-    translate(160, 40);
+    translate(70, 50);
     for (int i = 0; i <= w; i ++) {
       line(i*q, 0, i*q, h*q);
     }

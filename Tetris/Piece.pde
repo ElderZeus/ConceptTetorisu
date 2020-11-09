@@ -28,7 +28,7 @@ class Piece {
     fill(c);
     pushMatrix();
     if (!still) {
-      translate(160, 40);//pos inicial pieza, mismo que grid
+      translate(70, 50);//pos inicial pieza, mismo que grid
       translate(x*q, y*q);//desplazamiento de la pieza segun q, tamaño bloques
     }
     int rot = still ? 0 : r;//quien es mayor 0 o r
