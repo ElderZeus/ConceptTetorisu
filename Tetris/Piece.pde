@@ -33,7 +33,7 @@ class Piece {
     }
     int rot = still ? 0 : r;//quien es mayor 0 o r
     for (int i = 0; i < 4; i++) {
-      rect(pos[rot][i][0] * q, pos[rot][i][1] * q, q, q);//cubos del tetromino
+      circle(pos[rot][i][0] * q + 14, pos[rot][i][1] * q, q);
     }
     popMatrix();
   }

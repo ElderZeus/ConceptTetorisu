@@ -87,7 +87,7 @@ class Grid {
   }
   //bajar filas, si fila completa
   void setToBottom() {
-    int j = 0;
+    int j;
     for (j = 0; j < h; j ++) {
       if (!pieceFits()) {
         break;
@@ -100,7 +100,7 @@ class Grid {
   }
 
   void drawGrid() {
-    stroke(140);
+    stroke(160);
     pushMatrix();
     translate(70, 50);
     for (int i = 0; i <= w; i ++) {
@@ -110,12 +110,12 @@ class Grid {
       line(0, j*q, w*q, j*q);
     }
 
-    stroke(100);
+    stroke(160);
     for (int i = 0; i < w; i ++) {
       for (int j = 0; j < h; j ++) {
         if (cells[i][j] != 0) {
           fill(cells[i][j]);
-          rect(i*q, j*q, q, q);
+          circle(i*q+14, j*q+14, q);
         }
       }
     }

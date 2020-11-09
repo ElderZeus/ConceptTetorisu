@@ -1,5 +1,10 @@
+// necesario instalar librerio Sound 1.3.2
+import processing.sound.*;
 //valores default del juego
 PImage img;
+SoundFile file;
+String audioName="theme.mp3";
+String path;
 int w = 10; //celdas de ancho
 int h = 20; // celdas de alto
 int q = 25; //tamaño de bloque alto*ancho
@@ -24,8 +29,11 @@ Score score;
 
 void setup()
 {
+  path = sketchPath(audioName);
+  file = new SoundFile(this, path);
   size(550, 600);
   textSize(30);
+  file.play();
 }
 
 void initialize() {
@@ -65,7 +73,7 @@ void draw()
   }
   //cuadro de dialogo para empezar el juego
   if (!gameOn) {
-    String s = "Presione una tecla para empezar";
+    String s = "Presione ENTER para comenzar";
     textAlign(CENTER);
     text(s, 120, 220, 300, 100 );
   }
@@ -94,7 +102,7 @@ void keyPressed() {
       piece.inputKey(keyCode);
       break;
     }
-  } else if (keyPressed) {
+  } else if (key == ENTER) {
     if (!gameOn) {
       initialize();
       gameOver = false;
